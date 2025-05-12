@@ -1,0 +1,77 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Define the bouncing animation */
+@keyframes back {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+}
+
+.back {
+    animation: back 1s ease infinite;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.back:hover {
+    opacity: 0.7;
+}
+
+#Footer {
+    z-index: 2;
+    width: 100%;
+    /* min-width: 1920px; */
+    height: 326px;
+    background: #1A1A1A;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#footer-socials {
+    display: flex;
+    justify-content: space-evenly;
+    width: 204px;
+}
+
+#footer-socials a:hover {
+    position: relative;
+    bottom: 3px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.to-top {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    letter-spacing: 2.781px;
+    width: 188px;
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rights {
+    width: fit-content;
+    height: 22px;
+    color: #FFF;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.rights span {
+    font-weight: 400;
+}
