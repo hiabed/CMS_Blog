@@ -1,4 +1,5 @@
-import './Portfolio.css';
+import './Articles.css';
+import './About.css'
 
 const Portfolio = () => {
     const projectsData = [
@@ -54,6 +55,7 @@ const Portfolio = () => {
     return (
         <div id="Portfolio">
             <div className="portfolio">
+              <h1 className='about'>ARTICLES</h1>
             </div>
             <div className="tabs">
                 <a className='tab' style={{cursor: "pointer",color: "#FFFBFB"}}>Projects</a>
