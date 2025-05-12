@@ -42,9 +42,21 @@
     text-decoration: none;
 }
 
+.buttonn {
+    color: white;
+    width: 150px;
+    height: 30px;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonn:hover {
+    background-color: rgb(39, 35, 35);
+}
+
 .projects {
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -176,6 +188,12 @@
     width: 98%;
     height: 98%;
     background-color: #787878;
+}
+
+.more-to-come {
+    z-index: 500;
+    background-color: black;
+    width: 100%;
 }
 
 .more-to-come h3 {

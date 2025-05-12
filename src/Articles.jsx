@@ -1,7 +1,10 @@
 import './Articles.css';
 import './About.css'
+import React, { useRef } from 'react';
 
 const Portfolio = () => {
+    const [isOpened, setIsOpened] = React.useState(false);
+    const projectsRef = useRef(null);
     const projectsData = [
         {
           image: 'pingpong.png',  // Add your actual image URLs here
@@ -9,7 +12,7 @@ const Portfolio = () => {
           description: `Using the SPA implementation, I built the entire front end of our Pong game platform from the ground up in Vanilla JS with a
                         responsive UI using HTML, CSS, and Bootstrap that promised a smooth user experience. I also helped my four teammates in the
                         other aspects of the process, and the linking phase was also a rich yet tedious experience.`,
-          buttons: ['DEMO', 'MORE'],
+          button: "EXPLORE",
           url: "https://github.com/hiabed/Pong-Game-Platform",
         },
         {
@@ -18,7 +21,7 @@ const Portfolio = () => {
           description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
-          buttons: ['DEMO', 'MORE'],
+          button: "EXPLORE",
           url: "https://github.com/hiabed/Webserv",
         },
         {
@@ -27,29 +30,65 @@ const Portfolio = () => {
           description: `Designed a dynamic WordPress Web App using Docker. Created custom Dockerfiles to define rules for building each container
                         from scratch, adhering to the project's restriction on using pre-built images from the Docker Hub. Configured Nginx as the web
                         server and MariaDB for database management, ensuring seamless deployment and scalability.`,
-          buttons: ['DEMO', 'MORE'],
+          button: "EXPLORE",
           url: "https://github.com/hiabed/inception",
         },
         {
           image: 'iterm2.avif',
           title: 'Minishell',
           description: 'It is a small UNIX Shell that resembles Bash.',
-          buttons: ['DEMO', 'MORE'],
+          button: "EXPLORE",
           url: "https://github.com/hiabed/minishell",
         },
         {
           image: 'ecommerce.png',
           title: 'E-commerce Website',
           description: `I Developed the UI of an e-commerce website using React.js for the first time.`,
-          buttons: ['DEMO', 'MORE'],
+          button: "EXPLORE",
           url: "https://github.com/hiabed/E-Commerce-platform",
         },
         {
           image: 'cub3d.webp',
           title: "3D Game with C",
           description: "We implemented functional 3D game using Raycasting technic with C, from scratch using only a minimal graphic library called minilibx",
-          buttons: ['DEMO', 'MORE'],
+          button: "EXPLORE",
           url: "https://github.com/hiabed/cub3d_linux",
+        },
+                {
+          image: 'server.webp',
+          title: 'Custom Web Server',
+          description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
+                        socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
+                        transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
+          button: "EXPLORE",
+          url: "https://github.com/hiabed/Webserv",
+        },
+                {
+          image: 'server.webp',
+          title: 'Custom Web Server',
+          description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
+                        socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
+                        transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
+          button: "EXPLORE",
+          url: "https://github.com/hiabed/Webserv",
+        },
+                {
+          image: 'server.webp',
+          title: 'Custom Web Server',
+          description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
+                        socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
+                        transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
+          button: "EXPLORE",
+          url: "https://github.com/hiabed/Webserv",
+        },
+                {
+          image: 'server.webp',
+          title: 'Custom Web Server',
+          description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
+                        socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
+                        transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
+          button: "EXPLORE",
+          url: "https://github.com/hiabed/Webserv",
         },
       ];
     return (
@@ -58,11 +97,9 @@ const Portfolio = () => {
               <h1 className='about'>ARTICLES</h1>
             </div>
             <div className="tabs">
-                <a className='tab' style={{cursor: "pointer",color: "#FFFBFB"}}>Projects</a>
-                <a className='tab' style={{pointerEvents: "none", borderBottomColor: "#AAA"}}>Certifications</a>
-                <a className='tab' style={{pointerEvents: "none", borderBottomColor: "#AAA"}}>Education</a>
+                <a className='tab' style={{cursor: "pointer",color: "#FFFBFB"}}>Articles</a>
             </div>
-            <div className="projects">
+            <div className="projects" ref={projectsRef} style={{height: isOpened ? `${projectsRef.current.scrollHeight}px` : '800px', transition: 'height 1s ease',}}>
                 {projectsData.map((project, index) => (
                     <div className="project" key={index}>
                       <img src={project.image} alt={`Project ${index + 1}`} width="100%" height="100%" />
@@ -71,9 +108,7 @@ const Portfolio = () => {
                           <h1>{project.title}</h1>
                           <p>{project.description}</p>
                           <div className="buttons">
-                              {project.buttons.map((buttonText, btnIndex) => (
-                              <a href={project.url} target='blank_' key={btnIndex}>{buttonText}</a>
-                              ))}
+                              <a href={project.url} target='blank_'>{project.button}</a>
                           </div>
                         </div>
                       </div>
@@ -81,7 +116,7 @@ const Portfolio = () => {
                 ))}
             </div>
             <div className="more-to-come">
-                <h3>And many more projects <a href='https://github.com/hiabed?tab=repositories' target='blank_' rel="noopener noreferrer">here!</a></h3>
+                <h3><button className='buttonn' href='#' onClick={()=> isOpened ? setIsOpened(false) : setIsOpened(true)} target='blank_' rel="noopener noreferrer">{isOpened ? "SHOW LESS": "SHOW MORE"}</button></h3>
             </div>
         </div>
     )
