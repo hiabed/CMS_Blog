@@ -88,7 +88,7 @@ const Post = () => {
           message
         </label>
         <input name="content" id="content" placeholder="Share your thoughts*" required />
-        <input id="submit" type="submit" value="Submit" />
+        <input id="submit" type="submit" value="Create" />
       </form>
       
       {/* Toast Container - This will render all the toast notifications */}
