@@ -2,7 +2,7 @@ import './Articles.css';
 import './About.css'
 import React, { useRef } from 'react';
 
-const Portfolio = () => {
+const Articles = () => {
     const [isOpened, setIsOpened] = React.useState(false);
     const projectsRef = useRef(null);
     const projectsData = [
@@ -122,4 +122,4 @@ const Portfolio = () => {
     )
 }
 
-export default Portfolio;
+export default Articles;
