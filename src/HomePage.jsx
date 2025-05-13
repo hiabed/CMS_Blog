@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 import Articles from './Articles';
-import Contact from './Contact';
+import Post from './Post';
 import Footer from './Footer'
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import React from 'react';
@@ -57,10 +57,13 @@ const HomePage = () => {
   return (
     <div className="App" style={app}>
       <div className="navig" style={{backgroundColor: scrolled ? "#0B0B0B" : "transparent",top: scrolled ? 0 : 20,transition: "all 0.3s ease",}}>
-          <a className='nav' href="#About">About me</a>
-          <a className='nav' href="#Skills">Skills</a>
-          <a className='nav' href="#Portfolio" style={{marginRight: 25}}>Articles</a>
-          <a className='nav' href="#Contact" style={contact}>CONTACT US</a>
+        <div style={{marginLeft: 40}} className="logo">
+          <h1 className='logo-name'>Blog</h1>
+        </div>
+          <div style={{display: "flex"}}>
+            <a className='nav' href="#Portfolio" style={{marginRight: 25}}>Articles</a>
+            <a className='nav' href="#Contact" style={contact}>+ New post</a>
+          </div>
       </div>
       <div className='main' id="main" style={mainStyle}>
         <div className="myPicture" style={myPic}>
@@ -84,7 +87,7 @@ const HomePage = () => {
         </div>
       </div>
       <Articles />
-      <Contact />
+      <Post />
       <Footer />
     </div>
   );

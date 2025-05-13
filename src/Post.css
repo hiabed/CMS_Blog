@@ -32,25 +32,20 @@
     color: #8B8B8B;
 }
 
-#contact-form input {
-    width: 609px;
-    height: 43px;
-    border: 5px solid #000000;
-    border-top: none;
-    border-right: none;
-    padding-left: 15px;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.56px;
-    background-color: #80808000;
+#contact-form input:not(#picture) {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 #contact-form input:focus {
     outline: none;
 }
-
-
 
 #message {
     height: 179px !important;
@@ -134,4 +129,60 @@
     top: 8px !important;
     right: 8px !important;
 }
-  
+
+/* ---------------------------------- */
+
+/* ... other contact form styles ... */
+
+.upload-container {
+   margin-bottom: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; /* Align label and input to the start */
+}
+
+ .upload-label {
+   display: block;
+   margin-bottom: 8px;
+   color: #555;
+   font-weight: bold;
+ }
+
+ .upload-input {
+   padding: 8px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   box-sizing: border-box;
+   width: 100%; /* Make it full width for better usability */
+   background-color: #f0f0f0; /* Light gray background */
+   color: #333;
+ }
+
+ .upload-input::-webkit-file-upload-button {
+   background-color: #ddd;
+   color: #333;
+   border: none;
+   padding: 8px 12px;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+
+ .upload-input::-webkit-file-upload-button:hover {
+   background-color: #ccc;
+ }
+
+ .image-preview-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+ }
+
+ .image-preview {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover; /* Maintain aspect ratio and cover the container */
+ }
