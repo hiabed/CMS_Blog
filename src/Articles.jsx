@@ -13,7 +13,7 @@ const Articles = () => {
                         responsive UI using HTML, CSS, and Bootstrap that promised a smooth user experience. I also helped my four teammates in the
                         other aspects of the process, and the linking phase was also a rich yet tedious experience.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/Pong-Game-Platform",
+          url: "/Portfolio/Pong-Game-Platform",
         },
         {
           image: 'server.webp',
@@ -22,7 +22,7 @@ const Articles = () => {
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/CMS_Blog/Webserv",
+          url: "/Portfolio/CMS_Blog/Webserv",
         },
         {
           image: 'inception.webp',
@@ -31,28 +31,28 @@ const Articles = () => {
                         from scratch, adhering to the project's restriction on using pre-built images from the Docker Hub. Configured Nginx as the web
                         server and MariaDB for database management, ensuring seamless deployment and scalability.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/inception",
+          url: "/Portfolio/inception",
         },
         {
           image: 'iterm2.avif',
           title: 'Minishell',
           description: 'It is a small UNIX Shell that resembles Bash.',
           button: "EXPLORE",
-          url: "https://github.com/hiabed/minishell",
+          url: "/Portfolio/minishell",
         },
         {
           image: 'ecommerce.png',
           title: 'E-commerce Website',
           description: `I Developed the UI of an e-commerce website using React.js for the first time.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/E-Commerce-platform",
+          url: "/Portfolio/E-Commerce-platform",
         },
         {
           image: 'cub3d.webp',
           title: "3D Game with C",
           description: "We implemented functional 3D game using Raycasting technic with C, from scratch using only a minimal graphic library called minilibx",
           button: "EXPLORE",
-          url: "https://github.com/hiabed/cub3d_linux",
+          url: "/Portfolio/cub3d_linux",
         },
                 {
           image: 'server.webp',
@@ -61,7 +61,7 @@ const Articles = () => {
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/Webserv",
+          url: "/Portfolio/Webserv",
         },
                 {
           image: 'server.webp',
@@ -70,7 +70,7 @@ const Articles = () => {
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/Webserv",
+          url: "/Portfolio/Webserv",
         },
                 {
           image: 'server.webp',
@@ -79,7 +79,7 @@ const Articles = () => {
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/Webserv",
+          url: "/Portfolio/Webserv",
         },
                 {
           image: 'server.webp',
@@ -88,7 +88,7 @@ const Articles = () => {
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/Webserv",
+          url: "/Portfolio/Webserv",
         },
       ];
     return (
