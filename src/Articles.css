@@ -16,7 +16,7 @@
     justify-content: center;
     width: 1920px;
     height: 321px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.32) 100%), url(/Portfolio/nature.webp);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.32) 100%), url(nature.webp);
     background-size: cover;
 }
 
