@@ -1,12 +1,14 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 import Articles from './Articles';
 import Contact from './Contact';
 import Footer from './Footer'
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import React from "react";
+import LoginForm from './LoginForm';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 const mainStyle = {
   width: "100%",
@@ -47,15 +49,13 @@ const contact = {
   fontSize: 15,
 }
 
-function App() {
+function HomePage() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = React.useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 10);
   });
-
-  const [isOpened, setIsOpened] = React.useState(false);
 
   return (
     <div className="App" style={app}>
@@ -68,7 +68,7 @@ function App() {
       <div className='main' id="main" style={mainStyle}>
         <div className="myPicture" style={myPic}>
           <div id="me">
-            <img src="blog.jpg" alt="My Picture" style={{height: "100%", width: "100%", borderRadius: "50%"}} />
+            <img src="./blog.jpg" alt="My Picture" style={{height: "100%", width: "100%", borderRadius: "50%"}} /> {/* Ensure blog.jpg is in the correct location */}
           </div>
         </div>
         <div className='per-infos'>
@@ -76,13 +76,11 @@ function App() {
           <h1 className='my-name'>To our Blog</h1>
           <p className='title'>Articles / comments and many more.</p>
           <div className='socials'>
-            <a href="mailto:abed.hassani.idrissi@gmail.com?subject=Opportunity for Collaboration" target='blank_' rel="noopener noreferrer" className='social'><FontAwesomeIcon icon={faAt} style={{fontSize: 34}}/></a>
-            <a href='https://github.com/hiabed' target='blank_' rel="noopener noreferrer" className='social'><FontAwesomeIcon icon={faGithub} style={{fontSize: 34}}/></a>
-            <div href='https://github.com/hiabed' className='social'>
-              <a href='https://www.linkedin.com/in/mohammed-abed-hassani-idrissi/' id="linked" target='blank_' rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize: 24}} />
-              </a>
-            </div>
+            <a href="mailto:abed.hassani.idrissi@gmail.com?subject=Opportunity for Collaboration" target='_blank' rel="noopener noreferrer" className='social'><FontAwesomeIcon icon={faAt} style={{fontSize: 34}}/></a>
+            <a href='https://github.com/hiabed' target='_blank' rel="noopener noreferrer" className='social'><FontAwesomeIcon icon={faGithub} style={{fontSize: 34}}/></a>
+            <a href='https://www.linkedin.com/in/mohammed-abed-hassani-idrissi/' id="linked" target='_blank' rel="noopener noreferrer" className='social'>
+              <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize: 24}} />
+            </a>
           </div>
         </div>
       </div>
@@ -90,6 +88,37 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  );
+}
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false); // 🔐 login state
+  return (
+    <Routes> {/* Use Routes here */}
+      {/* Only show LoginForm when not logged in */}
+      <Route
+        path="/Portfolio/"
+        element={
+          isLoggedIn ? (
+            <Navigate to="/home" />
+          ) : (
+            <LoginForm onLogin={() => setIsLoggedIn(true)} />
+          )
+        }
+      />
+      {/* Home Page after login */}
+      <Route
+        path="/home"
+        element={
+          isLoggedIn ? (
+            <div className="App"> {/* You might not need this extra div with className="App" */}
+              <HomePage/>
+            </div>
+          ) : (
+            <Navigate to="/" />
+          )
+        }
+      />
+    </Routes>
   );
 }
 

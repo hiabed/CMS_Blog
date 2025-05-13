@@ -22,7 +22,7 @@ const Portfolio = () => {
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
                         transfer encoding, multipart boundaries, and parsing client requests for accurate processing.`,
           button: "EXPLORE",
-          url: "https://github.com/hiabed/Webserv",
+          url: "https://github.com/hiabed/CMS_Blog/Webserv",
         },
         {
           image: 'inception.webp',
