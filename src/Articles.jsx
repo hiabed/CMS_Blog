@@ -7,7 +7,7 @@ const Articles = () => {
     const projectsRef = useRef(null);
     const projectsData = [
         {
-          image: '/Portfolio/pingpong.png',  // Add your actual image URLs here
+          image: 'pingpong.png',  // Add your actual image URLs here
           title: 'Pong Game Platform',
           description: `Using the SPA implementation, I built the entire front end of our Pong game platform from the ground up in Vanilla JS with a
                         responsive UI using HTML, CSS, and Bootstrap that promised a smooth user experience. I also helped my four teammates in the
@@ -16,7 +16,7 @@ const Articles = () => {
           url: "https://github.com/hiabed/Pong-Game-Platform",
         },
         {
-          image: '/Portfolio/server.webp',
+          image: 'server.webp',
           title: 'Custom Web Server',
           description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
@@ -25,7 +25,7 @@ const Articles = () => {
           url: "https://github.com/hiabed/CMS_Blog/Webserv",
         },
         {
-          image: '/Portfolio/inception.webp',
+          image: 'inception.webp',
           title: 'Inception',
           description: `Designed a dynamic WordPress Web App using Docker. Created custom Dockerfiles to define rules for building each container
                         from scratch, adhering to the project's restriction on using pre-built images from the Docker Hub. Configured Nginx as the web
@@ -34,28 +34,28 @@ const Articles = () => {
           url: "https://github.com/hiabed/inception",
         },
         {
-          image: '/Portfolio/iterm2.avif',
+          image: 'iterm2.avif',
           title: 'Minishell',
           description: 'It is a small UNIX Shell that resembles Bash.',
           button: "EXPLORE",
           url: "https://github.com/hiabed/minishell",
         },
         {
-          image: '/Portfolio/ecommerce.png',
+          image: 'ecommerce.png',
           title: 'E-commerce Website',
           description: `I Developed the UI of an e-commerce website using React.js for the first time.`,
           button: "EXPLORE",
           url: "https://github.com/hiabed/E-Commerce-platform",
         },
         {
-          image: '/Portfolio/cub3d.webp',
+          image: 'cub3d.webp',
           title: "3D Game with C",
           description: "We implemented functional 3D game using Raycasting technic with C, from scratch using only a minimal graphic library called minilibx",
           button: "EXPLORE",
           url: "https://github.com/hiabed/cub3d_linux",
         },
                 {
-          image: '/Portfolio/server.webp',
+          image: 'server.webp',
           title: 'Custom Web Server',
           description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
@@ -64,7 +64,7 @@ const Articles = () => {
           url: "https://github.com/hiabed/Webserv",
         },
                 {
-          image: '/Portfolio/server.webp',
+          image: 'server.webp',
           title: 'Custom Web Server',
           description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
@@ -73,7 +73,7 @@ const Articles = () => {
           url: "https://github.com/hiabed/Webserv",
         },
                 {
-          image: '/Portfolio/server.webp',
+          image: 'server.webp',
           title: 'Custom Web Server',
           description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked
@@ -82,7 +82,7 @@ const Articles = () => {
           url: "https://github.com/hiabed/Webserv",
         },
                 {
-          image: '/Portfolio/server.webp',
+          image: 'server.webp',
           title: 'Custom Web Server',
           description: `Developed a custom web server inspired by Nginx, gaining comprehensive knowledge of HTTP protocols, server architecture, and
                         socket programming. My primary responsibility was implementing the POST method, including support for binary data, chunked

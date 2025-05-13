@@ -68,7 +68,7 @@ function HomePage() {
       <div className='main' id="main" style={mainStyle}>
         <div className="myPicture" style={myPic}>
           <div id="me">
-            <img src="/Portfolio/blog.jpg" alt="My Picture" style={{height: "100%", width: "100%", borderRadius: "50%"}} /> {/* Ensure blog.jpg is in the correct location */}
+            <img src="blog.jpg" alt="My Picture" style={{height: "100%", width: "100%", borderRadius: "50%"}} /> {/* Ensure blog.jpg is in the correct location */}
           </div>
         </div>
         <div className='per-infos'>
@@ -112,9 +112,7 @@ function App() {
         path="/home"
         element={
           isLoggedIn ? (
-            <div className="App"> {/* You might not need this extra div with className="App" */}
-              <HomePage/>
-            </div>
+            <HomePage/>
           ) : (
             <Navigate to="/" />
           )
