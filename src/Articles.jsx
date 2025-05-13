@@ -97,7 +97,7 @@ const Articles = () => {
               <h1 className='about'>ARTICLES</h1>
             </div>
             <div className="tabs">
-                <a className='tab' style={{cursor: "pointer",color: "#FFFBFB"}}>Articles</a>
+                <a className='tab' style={{cursor: "pointer",color: "#FFFBFB"}}>Feed</a>
             </div>
             <div className="projects" ref={projectsRef} style={{height: isOpened ? `${projectsRef.current.scrollHeight}px` : '800px', transition: 'height 1s ease',}}>
                 {projectsData.map((project, index) => (

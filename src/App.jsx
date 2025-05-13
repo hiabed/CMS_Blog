@@ -98,7 +98,7 @@ function App() {
     <Routes> {/* Use Routes here */}
       {/* Only show LoginForm when not logged in */}
       <Route
-        path="/Portfolio/"
+        path="/"
         element={
           isLoggedIn ? (
             <Navigate to="/home" />
