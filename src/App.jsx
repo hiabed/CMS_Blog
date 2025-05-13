@@ -78,9 +78,11 @@ function HomePage() {
           <div className='socials'>
             <a href="mailto:abed.hassani.idrissi@gmail.com?subject=Opportunity for Collaboration" target='_blank' rel="noopener noreferrer" className='social'><FontAwesomeIcon icon={faAt} style={{fontSize: 34}}/></a>
             <a href='https://github.com/hiabed' target='_blank' rel="noopener noreferrer" className='social'><FontAwesomeIcon icon={faGithub} style={{fontSize: 34}}/></a>
-            <a href='https://www.linkedin.com/in/mohammed-abed-hassani-idrissi/' id="linked" target='_blank' rel="noopener noreferrer" className='social'>
-              <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize: 24}} />
-            </a>
+            <div href='https://github.com/hiabed' className='social'>
+              <a href='https://www.linkedin.com/in/mohammed-abed-hassani-idrissi/' id="linked" target='blank_' rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize: 24}} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
