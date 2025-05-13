@@ -1,10 +1,11 @@
 import "./Post.css";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Don't forget to import the styles!
 
 const Post = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const fileInputRef = useRef(null); // Added fileInputRef
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -17,6 +18,13 @@ const Post = () => {
     } else {
       setSelectedImage(null);
     }
+  };
+
+  const handleClosePreview = () => { // Added handleClosePreview function
+     setSelectedImage(null);
+     if (fileInputRef.current) {
+       fileInputRef.current.value = ''; // Added clearing file input
+     }
   };
 
   const handleSubmit = (e) => {
@@ -42,22 +50,30 @@ const Post = () => {
       </p>
       <div className="separator" style={{marginTop: 0}}></div>
       <form id="contact-form" onSubmit={handleSubmit}>
-         <label htmlFor="picture" className="upload-label">
-           Add a picture
-         </label>
-         <input
-           type="file"
-           name="picture"
-           id="picture"
-           accept="image/*"
-           onChange={handleFileChange}
-           className="upload-input"
-         />
-         {selectedImage && (
-           <div className="image-preview-container">
-             <img src={selectedImage} alt="Preview" className="image-preview" />
-           </div>
-         )}
+        <label htmlFor="picture" className="upload-label">
+          Add a picture
+        </label>
+        <input
+          type="file"
+          name="picture"
+          id="picture"
+          accept="image/*"
+          onChange={handleFileChange}
+          className="upload-input"
+          ref={fileInputRef} // Added ref to the input
+        />
+        {selectedImage && (
+          <div className="image-preview-container">
+            <button
+              type="button"
+              className="close-preview-button"
+              onClick={handleClosePreview} // Changed onClick handler
+            >
+              &times;
+            </button>
+            <img src={selectedImage} alt="Preview" className="image-preview" />
+          </div>
+        )}
         <label htmlFor="title" className="sr-only">
           Email
         </label>
@@ -68,10 +84,10 @@ const Post = () => {
           placeholder="Post Title*"
           required
         />
-        <label htmlFor="message" className="sr-only">
+        <label htmlFor="content" className="sr-only">
           message
         </label>
-        <input name="message" id="message" placeholder="YOUR MESSAGE*" required />
+        <input name="content" id="content" placeholder="Share your thoughts*" required />
         <input id="submit" type="submit" value="Submit" />
       </form>
       
@@ -82,3 +98,4 @@ const Post = () => {
 };
 
 export default Post;
+

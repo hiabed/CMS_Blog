@@ -22,7 +22,7 @@
 }
 
 #contact-form {
-    margin-top: 123px;
+    margin-top: 40px;
     display: flex;
     height: 602px;
     width: 609px;
@@ -47,9 +47,9 @@
     outline: none;
 }
 
-#message {
+#content {
     height: 179px !important;
-    padding-bottom: 130px;
+    padding-bottom: 130px !important;
 }
 
 .sr-only {
@@ -71,7 +71,7 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    border-right: 5px solid #000 !important;
+    /* border-right: 5px solid #000 !important; */
     border-bottom: none !important;
 }
 
@@ -81,9 +81,7 @@
     opacity: 0.9;
     background-color: #cfcfcf;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
-    border-left-color: green !important;
-    border-right-color:  green !important;
-    /* color: white; */
+    border: 1px solid green !important;
 }
 
 .popup {
@@ -173,16 +171,43 @@
  }
 
  .image-preview-container {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
+   margin-top: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   overflow: hidden;
+   width: 100px;
+   height: 100px;
+   position: relative; /* To position the close button */
  }
 
  .image-preview {
    display: block;
    width: 100%;
    height: 100%;
-   object-fit: cover; /* Maintain aspect ratio and cover the container */
+   object-fit: cover;
+ }
+
+  .close-preview-button {
+   position: absolute;
+   top: 1px; /* Adjust as needed */
+   right: 1px; /* Adjust as needed */
+   background: none;
+   border: none;
+   color: #888;
+   font-size: 16px;
+   font-weight: bold;
+   cursor: pointer;
+   padding: 0;
+   line-height: 1;
+   width: 20px; /* Adjust size as needed */
+   height: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%; /* Make it circular */
+   background-color: rgba(255, 255, 255, 0.8); /* Optional background for better visibility */
+ }
+
+ .close-preview-button:hover {
+   color: #333;
  }
